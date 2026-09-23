@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f9f4" />
+    <meta name="description" content="Crie sua conta GoUp Events e descubra experiências em Santa Catarina." />
+    <title>Criar conta — GoUp Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
+    <script src="../js/auth.js" defer></script>
+    <script src="../js/site.js" defer></script>
+    <script src="../js/auth-pages.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="../assets/images/logo-goup.jpg"/></head>
+  <body data-page="cadastro">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header id="site-header"></header>
+
+    <main id="conteudo" class="auth-layout container">
+      <section class="auth-story" aria-labelledby="story-title"><span class="auth-story-kicker">FAÇA PARTE DO MOVIMENTO</span><h1 id="story-title">Mais momentos.<br /><em>Mais histórias.</em></h1><p>Crie sua conta e comece a guardar os eventos que combinam com você.</p><div class="story-preview" aria-hidden="true"><span>✦ SUA JORNADA GOUP</span><div><b>01</b><strong>Escolha sua cidade</strong><small>Descubra o que acontece perto</small></div><div><b>02</b><strong>Siga seus interesses</strong><small>Encontre experiências com sua cara</small></div><div><b>03</b><strong>Viva novas histórias</strong><small>O melhor plano é começar</small></div></div><span class="auth-story-mark">Vá. Viva. GoUp.</span></section>
+
+      <section class="auth-card auth-card-wide" aria-labelledby="register-title"><span class="section-kicker">Comece por aqui</span><h2 id="register-title">Crie sua conta<span class="pink-dot">.</span></h2><p class="auth-card-lead">Leva só um instante para abrir espaço para novas descobertas.</p><div class="form-message" id="form-message" role="alert" hidden></div>
+        <form id="register-form" novalidate>
+          <div class="form-grid"><div class="field"><label for="register-name">Nome completo</label><input id="register-name" name="nome" type="text" autocomplete="name" placeholder="Seu nome" required aria-describedby="register-name-error" /><small class="field-error" id="register-name-error" hidden></small></div><div class="field"><label for="register-city">Cidade</label><select id="register-city" name="cidade" required aria-describedby="register-city-error"><option value="">Selecione sua cidade</option><option>Blumenau</option><option>Gaspar</option><option>Balneário Piçarras</option><option>Itajaí</option><option>Pomerode</option><option>Florianópolis</option></select><small class="field-error" id="register-city-error" hidden></small></div></div>
+          <div class="field"><label for="register-email">E-mail</label><input id="register-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@exemplo.com" required aria-describedby="register-email-error" /><small class="field-error" id="register-email-error" hidden></small></div>
+          <div class="form-grid"><div class="field"><label for="register-password">Senha</label><div class="password-field"><input id="register-password" name="senha" type="password" autocomplete="new-password" placeholder="Mínimo de 8 caracteres" required aria-describedby="register-password-error" /><button class="password-toggle" type="button" data-toggle-password="register-password" aria-pressed="false">Mostrar</button></div><small class="field-error" id="register-password-error" hidden></small></div><div class="field"><label for="register-confirm">Confirme a senha</label><div class="password-field"><input id="register-confirm" name="confirmacao" type="password" autocomplete="new-password" placeholder="Repita sua senha" required aria-describedby="register-confirm-error" /><button class="password-toggle" type="button" data-toggle-password="register-confirm" aria-pressed="false">Mostrar</button></div><small class="field-error" id="register-confirm-error" hidden></small></div></div>
+          <fieldset class="interests"><legend>Categorias favoritas <span>(opcional)</span></legend><div class="interest-grid"><label><input type="checkbox" name="categorias" value="Música" /><span>Música</span></label><label><input type="checkbox" name="categorias" value="Gastronomia" /><span>Gastronomia</span></label><label><input type="checkbox" name="categorias" value="Natureza" /><span>Natureza</span></label><label><input type="checkbox" name="categorias" value="Cultura" /><span>Cultura</span></label><label><input type="checkbox" name="categorias" value="Festa" /><span>Festa</span></label><label><input type="checkbox" name="categorias" value="Praia" /><span>Praia</span></label></div></fieldset>
+          <div class="field terms-field"><label><input id="register-terms" type="checkbox" required aria-describedby="register-terms-error" /><span>Li e aceito as condições desta demonstração local.</span></label><small class="field-error" id="register-terms-error" hidden></small></div>
+          <button class="btn btn-lime auth-submit" type="submit">Criar minha conta <span aria-hidden="true">→</span></button>
+        </form><p class="auth-switch">Já tem uma conta? <a href="login.html">Entrar</a></p><p class="demo-note">Demonstração local. Não use uma senha que você utiliza em outros serviços.</p>
+      </section>
+    </main>
+
+    <footer class="auth-footer container"><span>© <span data-year></span> GoUp Events</span><span>Feito para descobrir Santa Catarina.</span></footer><div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+  </body>
+</html>
+

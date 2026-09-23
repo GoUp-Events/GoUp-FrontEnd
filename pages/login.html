@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f9f4" />
+    <meta name="description" content="Entre na sua conta GoUp Events para guardar suas descobertas." />
+    <title>Entrar — GoUp Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
+    <script src="../js/auth.js" defer></script>
+    <script src="../js/site.js" defer></script>
+    <script src="../js/auth-pages.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="../assets/images/logo-goup.jpg"/></head>
+  <body data-page="login">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header id="site-header"></header>
+
+    <main id="conteudo" class="auth-layout container">
+      <section class="auth-story" aria-labelledby="story-title"><span class="auth-story-kicker">BEM-VINDO DE VOLTA</span><h1 id="story-title">Seu próximo<br /><em>rolê começa aqui.</em></h1><p>Entre para continuar descobrindo experiências, guardar seus favoritos e viver mais de Santa Catarina.</p><div class="story-preview" aria-hidden="true"><span>✦ SEU PRÓXIMO PLANO</span><div><b>01</b><strong>Descubra algo novo</strong><small>Encontre seu momento</small></div><div><b>02</b><strong>Salve seus favoritos</strong><small>Leve suas ideias com você</small></div><div><b>03</b><strong>Vá viver</strong><small>Transforme planos em histórias</small></div></div><span class="auth-story-mark">Vá. Viva. GoUp.</span></section>
+
+      <section class="auth-card" aria-labelledby="login-title"><span class="section-kicker">Sua conta GoUp</span><h2 id="login-title">Bom ter você<br />por aqui<span class="pink-dot">.</span></h2><p class="auth-card-lead">Acesse sua conta para seguir de onde parou.</p><div class="form-message" id="form-message" role="alert" hidden></div>
+        <form id="login-form" novalidate>
+          <div class="field"><label for="login-email">E-mail</label><input id="login-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@exemplo.com" required aria-describedby="login-email-error" /><small class="field-error" id="login-email-error" hidden></small></div>
+          <div class="field"><div class="field-label-row"><label for="login-password">Senha</label><button class="subtle-link" type="button" id="open-recovery">Esqueceu a senha?</button></div><div class="password-field"><input id="login-password" name="senha" type="password" autocomplete="current-password" placeholder="Sua senha" required aria-describedby="login-password-error" /><button class="password-toggle" type="button" data-toggle-password="login-password" aria-pressed="false">Mostrar</button></div><small class="field-error" id="login-password-error" hidden></small></div>
+          <button class="btn btn-lime auth-submit" type="submit">Entrar na minha conta <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="auth-switch">Ainda não tem conta? <a href="cadastro.html">Criar conta grátis</a></p><p class="demo-note">Demonstração local. Não use uma senha que você utiliza em outros serviços.</p>
+      </section>
+    </main>
+
+    <footer class="auth-footer container"><span>© <span data-year></span> GoUp Events</span><span>Feito para descobrir Santa Catarina.</span></footer>
+    <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+    <dialog class="auth-dialog" id="recovery-dialog" aria-labelledby="recovery-title"><button class="dialog-x" type="button" data-close-dialog aria-label="Fechar">×</button><span class="section-kicker">Recuperação de senha</span><h2 id="recovery-title">Precisa de uma ajuda?</h2><p>O envio de e-mail de recuperação ficará disponível com o backend. Nesta demonstração, nenhuma mensagem será enviada.</p><form id="recovery-form" novalidate><label for="recovery-email">Seu e-mail</label><input id="recovery-email" type="email" inputmode="email" autocomplete="email" placeholder="voce@exemplo.com" required /><small class="field-error" id="recovery-email-error" hidden></small><button class="btn btn-lime" type="submit">Solicitar recuperação</button></form></dialog>
+  </body>
+</html>
+

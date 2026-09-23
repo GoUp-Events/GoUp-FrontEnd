@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#f8f9f4"/>
+  <meta name="description" content="Explore eventos e locais em Santa Catarina no mapa GoUp."/>
+  <title>Mapa — GoUp Events</title>
+  <link rel="icon" type="image/jpeg" href="../assets/images/logo-goup.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/pages.css"/>
+  <link rel="stylesheet" href="../css/mapa.css"/>
+  <script src="../js/dados.js" defer></script>
+  <script src="../js/auth.js" defer></script>
+  <script src="../js/site.js" defer></script>
+  <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js" defer></script>
+  <script src="../js/mapa.js" defer></script>
+</head>
+<body data-page="mapa">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header id="site-header"></header>
+  <main id="conteudo" class="container page-main map-page">
+    <div class="page-heading">
+      <span class="section-kicker">Veja o que está por perto</span>
+      <h1>Explore pelo <em>mapa.</em></h1>
+      <p>Encontre experiências por cidade e interesse. Selecione um evento para ver onde ele acontece.</p>
+    </div>
+    <div class="map-controls" aria-label="Filtros do mapa">
+      <div class="filter-field">
+        <label for="map-city">Cidade</label>
+        <select id="map-city"><option value="">Todas as cidades</option></select>
+      </div>
+      <div class="filter-field">
+        <label for="map-category">Categoria</label>
+        <select id="map-category"><option value="">Todas as categorias</option></select>
+      </div>
+      <div class="filter-field">
+        <label for="map-theme">Tema do mapa</label>
+        <select id="map-theme"><option value="light">Claro</option><option value="dark">Escuro</option></select>
+      </div>
+      <button class="btn btn-dark map-location-button" id="use-location" type="button">Usar minha localização</button>
+      <label class="map-places-option"><input id="map-show-places" type="checkbox"/> Mostrar locais próximos <span>marcadores rosa</span></label>
+    </div>
+    <p class="map-status" id="map-status" role="status" hidden></p>
+    <div class="map-layout">
+      <div class="map-stage">
+        <div id="map" class="map-canvas" role="region" aria-label="Mapa interativo de eventos e locais"></div>
+        <div id="map-loading" class="map-loading" role="status">Carregando mapa...</div>
+        <div class="map-legend" aria-hidden="true"><span><i class="legend-event"></i> Eventos</span><span><i class="legend-place"></i> Locais</span></div>
+      </div>
+      <aside class="map-sidebar" aria-label="Eventos no mapa">
+        <div class="map-sidebar-heading"><span class="section-kicker">Explore e escolha</span><h2>Eventos no mapa <small id="map-count" aria-live="polite"></small></h2><p>Clique em um evento para encontrá-lo no mapa.</p></div>
+        <div id="map-event-list" class="map-event-list"></div>
+      </aside>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+</body>
+</html>

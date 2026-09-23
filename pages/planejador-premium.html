@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#f8f9f4"/>
+  <meta name="description" content="Converse com o planejador Premium do GoUp Events."/>
+  <title>Planejador Premium — GoUp Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/pages.css"/>
+  <link rel="stylesheet" href="../css/planejador-premium.css"/>
+  <script src="../js/dados.js" defer></script>
+  <script src="../js/auth.js" defer></script>
+  <script src="../js/roteiros.js" defer></script>
+  <script src="../js/site.js" defer></script>
+  <script src="../js/planejador-premium.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="../assets/images/logo-goup.jpg"/>
+</head>
+<body data-page="premium">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header id="site-header"></header>
+  <main id="conteudo" class="container page-main premium-main">
+    <div class="page-heading premium-heading">
+      <span class="section-kicker">GoUp Premium · Assistente com IA</span>
+      <h1>Planeje com uma <em>conversa.</em></h1>
+      <p>Conte sua ideia e receba sugestões com base nos eventos e locais cadastrados no GoUp.</p>
+    </div>
+    <div class="premium-layout">
+      <section class="chat-panel" aria-labelledby="chat-title">
+        <div class="chat-top">
+          <div><span class="premium-avatar" aria-hidden="true">✳</span><span><strong id="chat-title">Planejador GoUp</strong><small id="chat-user">Sua próxima experiência começa aqui</small></span></div>
+          <button class="chat-clear" id="clear-chat" type="button">Limpar conversa</button>
+        </div>
+        <div id="chat-history" class="chat-history" role="log" aria-label="Histórico da conversa" aria-live="polite"></div>
+        <div id="typing-indicator" class="typing-indicator" role="status" hidden><span></span><span></span><span></span><small>GoUp está pensando...</small></div>
+        <div class="chat-bottom">
+          <div class="quick-prompts" aria-label="Sugestões rápidas">
+            <button type="button" data-prompt="Quero sair hoje à noite">Quero sair hoje à noite</button>
+            <button type="button" data-prompt="Monte um roteiro em Blumenau">Monte um roteiro em Blumenau</button>
+            <button type="button" data-prompt="Quero comer depois do evento">Quero comer depois do evento</button>
+            <button type="button" data-prompt="Quero algo barato">Quero algo barato</button>
+            <button type="button" data-prompt="Quero um passeio ao ar livre">Quero um passeio ao ar livre</button>
+          </div>
+          <form id="chat-form">
+            <label class="sr-only" for="chat-input">Sua mensagem</label>
+            <textarea id="chat-input" rows="1" maxlength="500" placeholder="Conte o que você gostaria de fazer..." required></textarea>
+            <button class="btn btn-lime" type="submit">Enviar →</button>
+          </form>
+        </div>
+      </section>
+      <aside class="route-panel" aria-labelledby="route-title">
+        <div class="route-panel-top"><span class="section-kicker">Sua sugestão</span><h2 id="route-title">Roteiro personalizado</h2><p>Uma ideia para transformar o seu próximo dia.</p></div>
+        <div id="route-preview" class="route-preview"><div class="route-empty"><span>✦</span><p>Converse com o planejador para receber uma sugestão de evento e lugar.</p></div></div>
+        <button id="save-route" class="btn btn-dark" type="button" disabled>Salvar roteiro</button>
+        <p class="premium-disclaimer">As recomendações usam dados demonstrativos do GoUp. Confirme horários e preços antes de sair.</p>
+      </aside>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+</body>
+</html>

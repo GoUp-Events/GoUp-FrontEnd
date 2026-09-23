@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f9f4" />
+    <meta name="description" content="Veja e personalize seu perfil GoUp Events." />
+    <title>Meu perfil — GoUp Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
+    <script src="../js/dados.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+    <script src="../js/favoritos.js" defer></script>
+    <script src="../js/site.js" defer></script>
+    <script src="../js/auth-pages.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="../assets/images/logo-goup.jpg"/></head>
+  <body data-page="perfil">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header id="site-header"></header>
+
+    <main id="conteudo" class="profile-main container" hidden>
+      <div class="profile-intro"><span class="section-kicker">Seu espaço GoUp</span><h1>Seu perfil, suas <em>descobertas.</em></h1><p>Guarde seus interesses e continue explorando o que acontece por perto.</p></div>
+      <div class="profile-grid"><section class="profile-card profile-summary" aria-labelledby="profile-title"><div class="profile-avatar" id="profile-avatar" aria-hidden="true"></div><div><span class="profile-badge">MINHA CONTA</span><h2 id="profile-title"></h2><p id="profile-email"></p><p id="profile-city" class="profile-city"></p></div><div class="profile-actions"><button class="btn btn-dark" id="edit-profile" type="button">Editar perfil</button><button class="subtle-link logout-button" type="button" data-logout>Sair da conta</button></div></section>
+        <section class="profile-card" aria-labelledby="preferences-title"><span class="section-kicker">Do seu jeito</span><h2 id="preferences-title">Preferências</h2><p class="profile-card-desc">Categorias que mais combinam com você.</p><div id="profile-categories" class="profile-tags"></div><div class="profile-divider"></div><div class="profile-theme-row"><div><strong>Tema do site</strong><small id="theme-label"></small></div><button class="btn btn-lime" type="button" id="profile-theme-toggle">Alternar tema</button></div></section>
+        <section class="profile-card profile-favorites" aria-labelledby="favorites-title"><div class="profile-card-heading"><div><span class="section-kicker">Para lembrar</span><h2 id="favorites-title">Seus favoritos</h2></div><span class="favorites-count" id="favorites-count">0</span></div><div id="profile-favorites"></div><a class="inline-link" href="../index.html#eventos">Explorar eventos <span aria-hidden="true">→</span></a></section>
+      </div>
+
+      <section class="profile-card edit-panel" id="edit-panel" aria-labelledby="edit-title" hidden><div class="profile-card-heading"><div><span class="section-kicker">Atualize seus dados</span><h2 id="edit-title">Editar perfil</h2></div><button class="subtle-link" type="button" id="cancel-edit">Cancelar</button></div><div class="form-message" id="form-message" role="alert" hidden></div><form id="edit-form" novalidate><div class="form-grid"><div class="field"><label for="edit-name">Nome completo</label><input id="edit-name" type="text" autocomplete="name" required aria-describedby="edit-name-error" /><small class="field-error" id="edit-name-error" hidden></small></div><div class="field"><label for="edit-city">Cidade</label><select id="edit-city" required aria-describedby="edit-city-error"><option value="">Selecione sua cidade</option><option>Blumenau</option><option>Gaspar</option><option>Balneário Piçarras</option><option>Itajaí</option><option>Pomerode</option><option>Florianópolis</option></select><small class="field-error" id="edit-city-error" hidden></small></div></div><fieldset class="interests"><legend>Categorias favoritas</legend><div class="interest-grid"><label><input type="checkbox" name="categorias" value="Música" /><span>Música</span></label><label><input type="checkbox" name="categorias" value="Gastronomia" /><span>Gastronomia</span></label><label><input type="checkbox" name="categorias" value="Natureza" /><span>Natureza</span></label><label><input type="checkbox" name="categorias" value="Cultura" /><span>Cultura</span></label><label><input type="checkbox" name="categorias" value="Festa" /><span>Festa</span></label><label><input type="checkbox" name="categorias" value="Praia" /><span>Praia</span></label></div></fieldset><button class="btn btn-lime" type="submit">Salvar alterações</button></form></section>
+    </main>
+
+    <footer class="auth-footer container"><span>© <span data-year></span> GoUp Events</span><span>Feito para descobrir Santa Catarina.</span></footer><div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+  </body>
+</html>
+

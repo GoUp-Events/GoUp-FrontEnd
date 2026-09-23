@@ -1,0 +1,108 @@
+﻿<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Descubra eventos, lugares e experiências em Santa Catarina com o GoUp Events." />
+    <meta name="theme-color" content="#f8f9f4" />
+    <title>GoUp Events — descubra o que fazer hoje</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <script src="js/dados.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/favoritos.js" defer></script>
+    <script src="js/site.js" defer></script>
+    <script src="js/main.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="assets/images/logo-goup.jpg"/></head>
+  <body>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" /></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11" /></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18" /></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5" /></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4" /></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" /></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.4 15.4A8.5 8.5 0 0 1 8.6 3.6 8.5 8.5 0 1 0 20.4 15.4Z" /></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" /></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.3 7.7L22 12l-7.7 2.3L12 22l-2.3-7.7L2 12l7.7-2.3L12 2Z" /></symbol>
+      <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9m4 0h3M4 17h3m4 0h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2" /></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" /></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5 19 19M19 5 5 19" /></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></symbol>
+      <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13M9 18c0 1.1-1.3 2-3 2s-3-.9-3-2 1.3-2 3-2 3 .9 3 2Zm11-2c0 1.1-1.3 2-3 2s-3-.9-3-2 1.3-2 3-2 3 .9 3 2Z" /></symbol>
+      <symbol id="i-food" viewBox="0 0 24 24"><path d="M4 3v8a3 3 0 0 0 6 0V3M7 3v18m12-18c-3 2-4 5-4 9h4V3Zm0 9v9" /></symbol>
+      <symbol id="i-nature" viewBox="0 0 24 24"><path d="M12 21v-9m0 6c-5 0-8-3-8-8 4 0 7 1 8 5m0-3c0-5 3-8 8-9 0 5-1 9-8 10" /></symbol>
+      <symbol id="i-culture" viewBox="0 0 24 24"><path d="m3 9 9-5 9 5M4 10h16M5 20h14M7 10v10m5-10v10m5-10v10" /></symbol>
+      <symbol id="i-party" viewBox="0 0 24 24"><path d="m3 21 7-2-5-5-2 7Zm2-7 9-9 5 5-9 9M16 3l1-1m4 5 1-1m-1 8 1 1M9 3l1 1" /></symbol>
+      <symbol id="i-sport" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m12 3 3 5-3 4-5-1-2-4m7 5 5 2 1 5m-6-7-1 6-5 2" /></symbol>
+      <symbol id="i-beach" viewBox="0 0 24 24"><path d="M3 21h18M12 19V5m0 0C8 5 5 8 4 12c3-1 6-1 8 1m0-8c4 0 7 3 8 7-3-1-6-1-8 1" /></symbol>
+      <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M4 8h13v6a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V8Zm13 2h2a2 2 0 0 1 0 4h-2M3 21h16M8 3v2m4-2v2" /></symbol>
+    </svg>
+
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header id="site-header"></header>
+
+    <main id="conteudo">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> Seu próximo momento começa aqui</span>
+            <h1 id="hero-title">Descubra o que<br /><span>fazer hoje</span><span class="title-period">.</span></h1>
+            <p>Eventos, lugares e experiências incríveis por Santa Catarina. Seu próximo rolê está mais perto do que você imagina.</p>
+            <form class="hero-search" id="hero-search" role="search">
+              <label for="search-input" class="sr-only">Buscar evento, lugar ou cidade</label>
+              <svg class="icon"><use href="#i-search" /></svg>
+              <input id="search-input" name="busca" type="search" placeholder="Evento, lugar ou cidade..." autocomplete="off" />
+              <button class="btn btn-lime" type="submit">Buscar <svg class="icon"><use href="#i-arrow" /></svg></button>
+            </form>
+            <div class="hero-suggestions"><span>Em alta:</span><button type="button" data-query="música">Música ao vivo</button><button type="button" data-query="gastronomia">Gastronomia</button><button type="button" data-query="praia">Praia</button></div>
+            <div class="hero-proof"><div class="avatar-stack"><span>SC</span><span>GO</span><span>UP</span></div><p><strong>6 cidades para explorar</strong><br />e novas histórias para viver</p></div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-image-wrap"><img src="assets/images/hero-festival.jpg" alt="Público em um evento de música, imagem ilustrativa" fetchpriority="high" /><span class="cover-caption">Santa Catarina em movimento<br /><strong>Encontre seu próximo momento.</strong></span></div>
+            <div class="hero-stamp"><svg class="icon"><use href="#i-spark" /></svg><span>Viva mais<br /><strong>perto de você</strong></span></div>
+            <div class="hero-floating"><span class="floating-icon"><svg class="icon"><use href="#i-pin" /></svg></span><span><small>Descubra Santa Catarina</small><strong>Onde a vida acontece</strong></span><svg class="icon"><use href="#i-arrow-up" /></svg></div>
+            <span class="hero-orbit orbit-one"></span><span class="hero-orbit orbit-two"></span>
+          </div>
+        </div>
+        <div class="hero-bottom container"><span>Explore seu mundo, um evento de cada vez.</span><a href="#categorias">Role para descobrir <span aria-hidden="true">↓</span></a></div>
+      </section>
+
+      <section class="section categories-section" id="categorias" aria-labelledby="categories-title">
+        <div class="container">
+          <div class="section-heading"><div><span class="section-kicker">Encontre sua vibe</span><h2 id="categories-title">O que combina com <em>você?</em></h2><p>De um show inesquecível a um café sem pressa: escolha por onde começar.</p></div><a class="inline-link" href="pages/eventos.html">Ver todos os eventos <svg class="icon"><use href="#i-arrow" /></svg></a></div>
+          <div class="category-grid" id="category-grid" aria-label="Categorias de eventos"></div>
+        </div>
+      </section>
+
+      <section class="section featured-section" id="eventos" aria-labelledby="featured-title">
+        <div class="container">
+          <div class="section-heading"><div><span class="section-kicker">Para colocar na agenda</span><h2 id="featured-title">Eventos que fazem <em>acontecer.</em></h2><p>Uma seleção de boas experiências para sair da rotina.</p></div><div class="section-heading-action"><span class="result-count" id="result-count" aria-live="polite"></span><button class="inline-link clear-search" id="clear-search" type="button" hidden>Limpar filtros <svg class="icon"><use href="#i-close" /></svg></button></div></div>
+          <div class="active-filter" id="active-filter" hidden></div>
+          <div class="event-grid" id="featured-grid" aria-live="polite"></div>
+          <div class="empty-state" id="empty-state" hidden><div class="empty-icon"><svg class="icon"><use href="#i-search" /></svg></div><h3>Nenhum evento por aqui</h3><p>Tente outra busca ou escolha uma categoria diferente.</p><button class="btn btn-dark" type="button" id="empty-reset">Ver todos os eventos</button></div>
+        </div>
+      </section>
+
+      <section class="section nearby-section" id="perto" aria-labelledby="nearby-title">
+        <div class="container"><div class="section-heading"><div><span class="section-kicker">Perto de você</span><h2 id="nearby-title">Bons planos, <em>logo ali.</em></h2><p>Comece por Blumenau e descubra o que acontece na região.</p></div><span class="location-pill"><svg class="icon"><use href="#i-pin" /></svg> Região de Blumenau, SC</span></div><div class="nearby-grid" id="nearby-grid"></div></div>
+      </section>
+
+      <section class="section cities-section" id="cidades" aria-labelledby="cities-title"><div class="container"><div class="section-heading"><div><span class="section-kicker">Descubra novos caminhos</span><h2 id="cities-title">Santa Catarina te <em>espera.</em></h2><p>Explore o melhor de cada cidade, no seu tempo.</p></div></div><div class="city-grid" id="city-grid"></div></div></section>
+
+      <section class="section how-section" id="como-funciona" aria-labelledby="how-title"><div class="container"><div class="how-intro"><span class="section-kicker">Simples assim</span><h2 id="how-title">Menos “o que fazer?”,<br /><em>mais “vamos?”</em></h2><p>O GoUp conecta você com experiências que combinam com o seu momento.</p></div><div class="steps-grid"><article class="step-card"><span class="step-number">01 / DESCUBRA</span><span class="step-icon step-icon-lime"><svg class="icon"><use href="#i-search" /></svg></span><h3>Explore possibilidades</h3><p>Encontre eventos e lugares por cidade, interesse ou vontade do dia.</p></article><article class="step-card"><span class="step-number">02 / ESCOLHA</span><span class="step-icon step-icon-pink"><svg class="icon"><use href="#i-heart" /></svg></span><h3>Encontre seu favorito</h3><p>Guarde o que chamou sua atenção e monte sua lista de próximos momentos.</p></article><article class="step-card"><span class="step-number">03 / VIVA</span><span class="step-icon step-icon-orange"><svg class="icon"><use href="#i-pin" /></svg></span><h3>Saia para viver</h3><p>Chame a companhia certa e transforme planos em boas histórias.</p></article></div></div></section>
+
+      <section class="section planner-section" id="planejador" aria-labelledby="planner-title"><div class="container planner-panel"><div class="planner-copy"><span class="section-kicker">Planejador GoUp</span><h2 id="planner-title">Seu dia perfeito,<br /><em>do seu jeito.</em></h2><p>Combine eventos e lugares em um roteiro para explorar Santa Catarina no seu ritmo.</p><a class="btn btn-lime" href="pages/planejador.html">Conhecer o planejador <svg class="icon"><use href="#i-arrow" /></svg></a></div><div class="planner-preview" aria-hidden="true"><div class="planner-preview-top"><span>UM DIA PARA LEMBRAR</span><span>✦ GOUP PLAN</span></div><div class="planner-route"><div><span class="route-time">10:00</span><span class="route-dot"></span><span><strong>Café para começar</strong><small>Blumenau · Gastronomia</small></span></div><div><span class="route-time">14:30</span><span class="route-dot"></span><span><strong>Descoberta pela cidade</strong><small>Blumenau · Cultura</small></span></div><div><span class="route-time">19:00</span><span class="route-dot"></span><span><strong>Música e boas histórias</strong><small>Blumenau · Música</small></span></div></div><div class="planner-preview-bottom">Seu roteiro, seu ritmo <svg class="icon"><use href="#i-spark" /></svg></div></div></div></section>
+
+      <section class="section premium-section" id="premium" aria-labelledby="premium-title"><div class="container premium-panel"><div class="premium-symbol" aria-hidden="true">✳</div><div><span class="section-kicker">Planejador Premium · Demonstração</span><h2 id="premium-title">Mais descobertas.<br /><em>Mais experiências.</em></h2><p>Converse com o planejador e receba sugestões simuladas de eventos e lugares.</p></div><a class="btn btn-outline-light" href="pages/planejador-premium.html">Abrir planejador <svg class="icon"><use href="#i-arrow" /></svg></a></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="brand" href="#site-header" aria-label="GoUp Events, voltar ao topo"><img class="brand-logo" src="assets/images/logo-goup.jpg" alt="Logo GoUp Events" width="1254" height="1254" /></a><p>Mais que sair de casa. É descobrir o que faz a vida acontecer.</p></div><div class="footer-links"><div><h3>Explore</h3><a href="#eventos">Eventos</a><a href="#categorias">Categorias</a><a href="#cidades">Cidades</a></div><div><h3>GoUp</h3><a href="#como-funciona">Como funciona</a><a href="#planejador">Planejador</a><a href="#premium">Premium</a></div></div><div class="footer-message"><span>SC É NOSSO LUGAR</span><strong>Vá. Viva. GoUp<span>.</span></strong></div></div><div class="container footer-bottom"><span>© <span id="current-year"></span> GoUp Events. Feito para descobrir.</span><span>Santa Catarina, Brasil <svg class="icon"><use href="#i-heart" /></svg></span></div></footer>
+
+    <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+  </body>
+</html>
+
